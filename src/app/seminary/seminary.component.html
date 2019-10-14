@@ -1,1 +1,13 @@
-<p>seminary works!</p>
+<div class='seminaries'>
+    <div class="add">
+            <p routerLink='adding/' class="button1 bouncy">Add!</p>
+    </div>
+    <div class='semloop'>
+        <div *ngFor='let sem of semDates' class='seminary'>
+            <h2>{{ sem.date }}</h2>  <br>
+            <h3>{{ sem.topic }}</h3> <br>
+            <h6>{{ sem.author }}</h6>
+            <h6>{{ sem.updated_at | date:'medium'}}</h6>
+        </div>   
+    </div> 
+</div>

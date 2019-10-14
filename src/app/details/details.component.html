@@ -1,1 +1,22 @@
-<p>details works!</p>
+<div>
+    <div class='add'>
+        <div>
+            <label>Author:
+                 <input #author type='text'/>
+            </label>
+            <br>
+            <label>Topic:
+                <input #topic type='text'/>
+            </label>
+            <br>
+            <label>Date:
+                <input #date type='date'/>
+            </label>
+            <br>
+            <!-- (click) passes input value to add() and then clears the input -->
+            <button type='submit' (click)="addDate(author.value,topic.value,date.value); author.value = ''; topic.value = ''; date.value ='';">
+              Add!
+            </button>
+          </div>
+    </div>
+</div>

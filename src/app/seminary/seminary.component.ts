@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SemDate } from '../modele/semDate';
+import { SeminaryDatesService } from '../seminary-dates.service';
 
 @Component({
   selector: 'app-seminary',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeminaryComponent implements OnInit {
 
-  constructor() { }
+  semDates: SemDate[];
+
+  constructor(private datesService: SeminaryDatesService) { }
 
   ngOnInit() {
+
+    this.datesService.allSemDates().subscribe(
+      (data) => {
+        this.semDates = data
+      },
+      (error) => {
+        console.log(error)
+      }
+    )
+
+    console.log(this.semDates)
+
   }
 
 }
