@@ -1,0 +1,34 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'VT323', monospace;
+}
+
+.bg {
+    margin: 0;
+    padding: 0;
+    background-image: url("https://media.giphy.com/media/10BT4UJwHuEWys/source.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-width: 300px;
+    min-height: 500px;
+    overflow: auto;
+}
+
+.buttons {
+    height: 7%;
+    width: 25%;
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+}
