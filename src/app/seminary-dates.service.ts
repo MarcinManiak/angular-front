@@ -17,7 +17,7 @@ export class SeminaryDatesService {
   };
 
 
-  private baseUrl = 'http://marcinmaniak.pythonanywhere.com'
+  private baseUrl = 'https://marcinmaniak.pythonanywhere.com'
 
   allSemDates(): Observable<any> {
     return this.http.get(this.baseUrl + '/api/dates/')
